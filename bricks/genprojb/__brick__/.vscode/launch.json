@@ -1,0 +1,22 @@
+{
+ 
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Dev",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": ["--dart-define=DEFINE_APP_DISPLAY_NAME=[DEV]{{app_name}}", "--dart-define=DEFINE_APP_ID=com.{{name}}.dtm", "--dart-define=DEFINE_ENV=dev","--dart-define=DEFINE_DEVELOPMENT_TEAM=AS47L5ZRAJ"],
+        },
+        {
+            "name": "Prod",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": ["--dart-define=DEFINE_APP_DISPLAY_NAME={{app_name}}", "--dart-define=DEFINE_APP_ID=com.dtm.{{name}}", "--dart-define=DEFINE_ENV=prod","--dart-define=DEFINE_DEVELOPMENT_TEAM=AS47L5ZRAJ"],
+        },
+   
+    ]
+}
